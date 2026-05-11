@@ -1,0 +1,8 @@
+{
+  "editor.tabSize": 4,
+  "editor.formatOnSave": true,
+  "prettier.printWidth": 600,
+  "[php]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

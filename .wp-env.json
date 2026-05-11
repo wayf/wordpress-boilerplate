@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/wp-env.json",
+  "port": 80,
+  "mysqlPort": 3306,
+  "testsEnvironment": false,
+  "mappings": {
+    "database": "./wordpress/database",
+    "wp-content/uploads": "./wordpress/uploads",
+    "wp-content/plugins": "./wordpress/plugins",
+    "wp-content/themes/template": "./template"
+  }
+}
