@@ -8,11 +8,12 @@ This is a ready-to-use boilerplate for fast and comfortable WordPress theme, plu
 
 ### Key Features
 
-- One-command development environment
-- Fully isolated Docker setup
-- Convenient npm scripts for daily workflow
+- One-command development environment with wp-env
+- Modern frontend tooling with **Vite**
+- Fully isolated Docker setup (WordPress + MySQL + WP-CLI)
 - Easy database export/import
-- Direct access to WP-CLI and container shell
+- Persistent `wp-content` folder
+- Prettier code formatting with PHP support
 
 ## Requirements
 
@@ -61,7 +62,37 @@ npm run cli        # Open bash in CLI container (WP-CLI)
 
 npm run db:export  # Export database to ./wordpress/database/dump.sql
 npm run db:import  # Import database from ./wordpress/database/dump.sql
+
+# Vite
+npm run build      # Build assets for production
+npm run watch      # Watch mode (recommended for development)
 ```
+
+## Database Management
+
+The project includes convenient commands for working with the database.
+
+### Commands
+
+```bash
+npm run db:export   # Export current database to ./database/dump.sql
+npm run db:import   # Import ./database/dump.sql into the database
+```
+
+### Why keep the database dump in Git?
+
+- **Consistent starting point** — every developer gets the same database state after `npm run start`
+- **Version control** of your site configuration (settings, pages, posts, plugins activation, etc.)
+- **Easy onboarding** — new team members can start working instantly
+- **Reproducible environment** — you can always restore a known good state
+- **Safe sharing** of test data and configurations
+
+## Frontend Development (Vite)
+
+This boilerplate comes with **Vite** pre-configured for fast frontend development.
+
+- Use `npm run watch` during active development
+- Use `npm run build` to create optimized production assets
 
 ## Code Formatting
 
